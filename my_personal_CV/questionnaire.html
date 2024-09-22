@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+</head>
+<body>
+
+<h1>Questionnaire</h1>
+
+<!-- Form for the questionnaire -->
+<form action="submit_form.php" method="post">
+    
+    <!-- Name question -->
+    <label for="name">What is your name?</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <!-- Age question -->
+    <label for="age">What is your age?</label><br>
+    <input type="number" id="age" name="age" min="1" required><br><br>
+    
+    <!-- Gender question -->
+    <label>What is your gender?</label><br>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label><br><br>
+    
+    <!-- Hobbies question -->
+    <label>What are your hobbies?</label><br>
+    <input type="checkbox" id="reading" name="hobbies" value="Reading">
+    <label for="reading">Reading</label><br>
+    <input type="checkbox" id="sports" name="hobbies" value="Sports">
+    <label for="sports">Sports</label><br>
+    <input type="checkbox" id="music" name="hobbies" value="Music">
+    <label for="music">Music</label><br>
+    <input type="checkbox" id="traveling" name="hobbies" value="Traveling">
+    <label for="traveling">Traveling</label><br><br>
+    
+    <!-- Dropdown question -->
+    <label for="education">What is your highest level of education?</label><br>
+    <select id="education" name="education" required>
+        <option value="high-school">High School</option>
+        <option value="bachelors">Bachelor's Degree</option>
+        <option value="masters">Master's Degree</option>
+        <option value="phd">PhD</option>
+    </select><br><br>
+    
+    <!-- Comments or Suggestions -->
+    <label for="comments">Any comments or suggestions?</label><br>
+    <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
