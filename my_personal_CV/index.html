@@ -4,47 +4,42 @@
 <head>
     <title>My CV</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
 
-    <ul> 
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./skills.html">Skills</a></li>
-        <li><a href="./education.html">Education&Experience</a></li>
-        <li><a href="./scheduletable.html">Schedule</a></li>
-        <li><a href="./questionnaire.html">Questionnaire</a></li>
-    </ul>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="./index.html" class="active">Home</a>
+        <a href="./skills.html">Skills</a>
+        <a href="./education.html">Education & Experience</a>
+        <a href="./scheduletable.html">Schedule</a>
+        <a href="./questionnaire.html">Questionnaire</a>
+        <a href="./contact.html">Contact</a>
+    </div>
 
-    <table>
-        <tr>
-            <td><a href="./mypic.jpeg" target="_blank">
-                    <img src="./mypic.jpeg" width="100px" style="width: 150px; height: 150px; border-radius: 50%;"
-                        alt="A profile image of me">
-                </a></td>
-            <td>
-                <h1>Seljan Musayeva</h1>
-            </td>
-        </tr>
-    </table>
+    <!-- Profile Image and Bio Section -->
+    <div class="profile-container">
+        <a href="./mypic.jpeg" target="_blank">
+            <img src="./mypic.jpeg" alt="A profile image of me">
+        </a>
+        <h1>Seljan Musayeva</h1>
+    </div>
 
-
-    <h1>Biography</h1>
-
-    <p>I am an IT student at
-
-        <a href="https://www.ada.edu.az/en/schools/site" target="_blank">SITE</a>
-
-        .
+    <!-- Biography Section -->
+    <h1 style="text-align: center;">Biography</h1>
+    <p style="text-align: center;">I am an IT student at 
+        <a href="https://www.ada.edu.az/en/schools/site" target="_blank">SITE</a>.
     </p>
+    <p style="text-align: center;"><strong>I will be taking SDP next semester.</strong></p>
 
-    <p><strong>I will be taking SDP next semestr.</strong></p>
+    <!-- Updated Horizontal Rule -->
+    <hr class="centered">
 
-    <hr>
-
-    <h1>What is new?</h1>
-
-    <ul>
+    <!-- What's New Section -->
+    <h1 style="text-align: center;">What is new?</h1>
+    <ul style="text-align: center; list-style-position: inside;">
         <li>2024 Fall term started!
             <ol>
                 <li>Action 1</li>
@@ -55,11 +50,27 @@
         <li>2024 Spring term finished!</li>
     </ul>
 
-    <ul>
-        <li><a href="./contact.html">Contact me</a></li>
-    </ul>
-
-
+    <!-- Photo Gallery Section -->
+    <h1 style="text-align: center;">Photo Gallery</h1>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <a href="./images/photo1.jpg" target="_blank">
+                <img src="./photo1.jpeg" alt="Project Image 1">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="./images/photo2.jpg" target="_blank">
+                <img src="./photo2.jpeg" alt="Project Image 2">
+            </a>
+        </div>
+        <div class="gallery-item">
+            <a href="./images/photo3.jpg" target="_blank">
+                <img src="./photo3.jpeg" alt="Project Image 3">
+            </a>
+        </div>
+    
+    </div>
+    
 </body>
 
 </html>

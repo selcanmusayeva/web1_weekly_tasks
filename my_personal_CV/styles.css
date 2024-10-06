@@ -1,0 +1,136 @@
+/* General Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* Added padding to prevent content from being hidden under the navbar */
+}
+
+/* Center all content */
+.center-all {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Center text */
+    min-height: calc(100vh - 60px); /* Full height minus navbar */
+    padding-top: 20px; /* Optional padding for better spacing */
+}
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover:not(.active) {
+    background-color: #ddd;
+    color: #333;
+}
+
+.navbar a.active {
+    background-color: #04AA6D;
+    color: white;
+    cursor: default;
+}
+
+.navbar a.active:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Profile and bio section styling */
+.profile-container {
+    margin-top: 20px; /* Adjusted to account for navbar padding */
+    text-align: center;
+}
+
+.profile-container img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.profile-container img:hover {
+    width: 220px;
+    height: 220px;
+}
+
+.profile-container h1 {
+    margin-top: 10px;
+}
+
+/* Centered and thicker horizontal rule */
+hr.centered {
+    width: 50%;
+    height: 3px;
+    margin: 20px auto;
+    background-color: #000;
+    border: none;
+}
+
+/* Photo Gallery Styling */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the gallery items */
+    margin-top: 40px;
+    gap: 20px; /* Space between items */
+}
+
+.gallery-item {
+    border: 2px solid #ddd;
+    border-radius: 10px; /* Rounded corners for images */
+    overflow: hidden; /* Ensures rounded corners for image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover; /* Fit the image inside the container */
+    transition: transform 0.3s ease; /* Smooth zoom effect */
+}
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1); /* Slight zoom on image itself */
+}
+
+/* Responsive Gallery */
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 100%; /* Single image per row for mobile */
+    }
+
+    .gallery-item img {
+        width: 100%; /* Adjust image width for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (min-width: 769px) {
+    .gallery-item {
+        flex: 1 1 calc(33.333% - 20px); /* 3 images per row for desktop */
+    }
+}

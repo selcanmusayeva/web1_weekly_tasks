@@ -1,0 +1,69 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+#flag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 50vw;
+  background: linear-gradient(to bottom, #00B5E2 33.333%, #EF3340 33.333% 66.666%, #509E2F 66.666%);
+}
+#content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: calc(50vw * (2 / 5));
+  height: calc(50vw * (3 / 10));
+}
+
+#moon {
+  height: calc(50vw * (3 / 10));
+  width: calc(50vw * (3 / 10));
+  background-color: white;
+  border-radius: 50%;
+}
+
+#moon-clip {
+  position: absolute;
+  left: 15%;
+  width: calc(50vw * (1 / 4));
+  height: calc(50vw * (1 / 4));
+  background-color: #EF3340;
+  border-radius: 50%;
+}
+
+#star {
+  background-color: white;
+  position: absolute;
+  left: 58.3%;
+  height: calc(50vw * (1 / 6));
+  width: calc(50vw * (1 / 6));
+  clip-path: polygon(
+      0% 50%,
+      25% 40%,
+      15% 15%,
+      40% 25%,
+      50% 0%, 
+      60% 25%,
+      85% 15%, 
+      75% 40%, 
+      100% 50%,
+      75% 60%, 
+      85% 85%, 
+      60% 75%,
+      50% 100%, 
+      40% 75%, 
+      15% 85%,
+      25% 60%);
+}
